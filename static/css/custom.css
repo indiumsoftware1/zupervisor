@@ -1,0 +1,211 @@
+.big-checkbox{
+    border:1px solid;
+    padding:10px;
+}
+
+.form-radio-sign{
+    font-size:1.6em;
+    text-align: center;
+}
+
+.algm1{
+    color:#00a0e4;
+    font-weight: 600;
+}
+.list1 {
+  list-style-type: disc;
+    color:#00a0e4; /* or whatever color you prefer */
+  }
+  .list2 {
+    list-style-type: disc;
+    color:#993e8c; /* or whatever color you prefer */
+  }
+
+  .list3 {
+    list-style-type: disc;
+    color: #25a23e; /* or whatever color you prefer */
+  }
+
+  .list4 {
+    list-style-type: disc;
+    color: #f3570c; /* or whatever color you prefer */
+  }
+
+
+
+  ul{
+    list-style: none;
+  }
+
+  .background-color1{
+    text-align: center;
+    background-color:#00a0e4;
+    color: white;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+  }
+
+  .background-color2{
+      text-align: center;
+      background-color: #993e8c;
+      color: white;
+      margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+  }
+
+  .background-color3{
+    text-align: center;
+    background-color: #25a23e;
+    color: white;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+}
+
+.background-color4{
+    text-align: center;
+    background-color: #f3570c;
+    color: white;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+}
+
+ .oneclass{
+  background-color: #cce2e9;
+}
+
+ .twoclass{
+  background-color: #eee0f1;
+}
+
+ .threeclass{
+  background-color: #ebf1ed;
+}
+
+
+.fourclass{
+  background-color: #f8e9d6;
+}
+
+
+
+
+  .algm2{
+      color:#993e8c;
+      font-weight: 600;
+  }
+
+
+  .algm3{
+    color: #25a23e;
+    font-weight: 600;
+}
+
+.algm4{
+    color: #f3570c;
+    font-weight: 600;
+}
+
+.signup {
+  width: 400px;
+  padding: 60px 25px;
+  border-radius: 5px;
+}
+
+/*Copied from bootstrap to handle input file multiple*/
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+/*Also */
+.btn-success {
+  border: 1px solid #c5dbec;
+  background: #d0e5f5;
+  font-weight: bold;
+  color: #2e6e9e;
+}
+/* This is copied from https://github.com/blueimp/jQuery-File-Upload/blob/master/css/jquery.fileupload.css */
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: "alpha(opacity=0)";
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+.thumb {
+  height: 80px;
+  width: 100px;
+  border: 1px solid #000;
+  margin-top: 52px;
+}
+
+ul.thumb-Images li {
+  width: 120px;
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+  height: 120px;
+}
+
+.img-wrap {
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+}
+
+.img-wrap .close {
+  margin-top: 52px;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 100;
+  background-color: #d0e5f5;
+  padding: 5px 2px 2px;
+  color: #000;
+  font-weight: bolder;
+  cursor: pointer;
+  opacity: 0.5;
+  font-size: 23px;
+  line-height: 10px;
+  border-radius: 50%;
+}
+
+.img-wrap:hover .close {
+  opacity: 1;
+  background-color: #ff0000;
+}
+
+.FileNameCaptionStyle {
+  font-size: 12px;
+}
+
+
+
