@@ -201,4 +201,31 @@ display: none;
   height: 250px;
 }
 
+#profileImage {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  background: skyblue;
+  font-size: 23px;
+  color: #fff;
+  text-align: center;
+  line-height: 42px;
+  font-weight: 600;
+}
+
+#profileImage1 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: skyblue;
+  font-size: 33px;
+  color: #fff;
+  text-align: center;
+  line-height: 63px;
+  font-weight: 600;
+}
+
+#firstName{
+  display: none;
+}
 

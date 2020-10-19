@@ -10,6 +10,7 @@
 
 	<!-- Fonts and icons -->
 	<script src="../static/js/webfont/webfont.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" media="all">
 	<link rel="stylesheet" href="../static/css/fonts.min.css" media="all">
 	<script>
@@ -20,6 +21,15 @@
 				sessionStorage.fonts = true;
 			}
 		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			var firstName = $('#firstName').text();
+			var intials = $('#firstName').text().charAt(0);
+			var profileImage = $('#profileImage').text(intials);
+			var profileImage = $('#profileImage1').text(intials);
+		});
+
 	</script>
 
 	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
@@ -263,15 +273,17 @@
 						<li class="nav-item dropdown hidden-caret">
 							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
 								<div class="avatar-sm">
-									<img src="../static/img/profile.png" style="width:40px;" alt="..." class="avatar-img rounded-circle">
+									<span id="firstName">Zupervise</span>
+									<div id="profileImage"></div>
 								</div>
 							</a>
 							<ul class="dropdown-menu dropdown-user animated fadeIn">
 								<div class="dropdown-user-scroll scrollbar-outer">
 									<li>
 										<div class="user-box">
-											<div class="avatar-lg"><img src="../static/img/profile.png" style="width:66px;"
-													alt="image profile" class="avatar-img rounded">
+											<div class="avatar-lg">
+												<span id="firstName">Zupervise</span>
+									<div id="profileImage1"></div>
 											</div>
 											<div class="u-text">
 												<h4>Zupervise</h4>

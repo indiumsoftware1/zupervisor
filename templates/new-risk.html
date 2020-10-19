@@ -6,23 +6,33 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>New Risk | Zupervise</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" src="../static/img/icon.ico" type="image/x-icon"/>
+	<link rel="icon" src="../static/img/icon.ico" type="image/x-icon" />
 
 	<!-- Fonts and icons -->
 	<script src="../static/js/webfont/webfont.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" media="all"><link rel="stylesheet" href="../static/css/fonts.min.css" media="all">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" media="all">
+	<link rel="stylesheet" href="../static/css/fonts.min.css" media="all">
 	<script>
 		WebFont.load({
-			google: {"families":["Lato:300,400,700,900"]},
-			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../static/css/fonts.min.css']},
-			active: function() {
+			google: { "families": ["Lato:300,400,700,900"] },
+			custom: { "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../static/css/fonts.min.css'] },
+			active: function () {
 				sessionStorage.fonts = true;
 			}
 		});
 	</script>
+	<script>
+		$(document).ready(function () {
+			var firstName = $('#firstName').text();
+			var intials = $('#firstName').text().charAt(0);
+			var profileImage = $('#profileImage').text(intials);
+			var profileImage = $('#profileImage1').text(intials);
+		});
+	</script>
 
-<link rel="stylesheet" href="../static/css/bootstrap.min.css">
-<link rel="stylesheet" href="../static/css/atlantis.min.css">
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/atlantis.min.css">
 	<link rel="stylesheet" href="../static/css/custom.css">
 
 	<!-- CSS Just for demo purpose, don't include it in your project -->
@@ -263,16 +273,17 @@
 							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"
 								aria-expanded="false">
 								<div class="avatar-sm">
-									<img src="../static/img/profile.png" style="width:40px;" alt="..."
-										class="avatar-img rounded-circle">
+									<span id="firstName">Zupervise</span>
+									<div id="profileImage"></div>
 								</div>
 							</a>
 							<ul class="dropdown-menu dropdown-user animated fadeIn">
 								<div class="dropdown-user-scroll scrollbar-outer">
 									<li>
 										<div class="user-box">
-											<div class="avatar-lg"><img src="../static/img/profile.png"
-													style="width:66px;" alt="image profile" class="avatar-img rounded">
+											<div class="avatar-lg">
+												<span id="firstName">Zupervise</span>
+												<div id="profileImage1"></div>
 											</div>
 											<div class="u-text">
 												<h4>Zupervise</h4>
@@ -635,130 +646,133 @@
 												<label>Algorithm</label><br />
 												<div class="row">
 													<div class="col-xs-12 col-md-3">
-												<label class="form-radio-label">
-													<input class="form-radio-input" type="radio" name="optionsRadios"
-														value="" checked="">
-														<div class="big-checkbox oneclass">
-															<div class="background-color1" >
-													<span class="form-radio-sign">Supervised Learning</span><br /><br />
-												</div>
-													<div>
+														<label class="form-radio-label">
+															<input class="form-radio-input" type="radio"
+																name="optionsRadios" value="" checked="">
+															<div class="big-checkbox oneclass">
+																<div class="background-color1">
+																	<span class="form-radio-sign">Supervised
+																		Learning</span><br /><br />
+																</div>
+																<div>
 
-														<p style="word-break: break-all;
+																	<p style="word-break: break-all;
 													white-space: normal;">Data scientists provide input,output and feedback to build
-															model(as the definition)</p>
-														<h4 class="algm1">EXAMPLE ALGORITHMS</h4>
-														<h4>Linear regressions</h4>
-														<ul>
-															<li class="list1">sales forecasting</li>
-															<li class="list1">risk assessment</li>
-														</ul>
-														<h4>Support vector machines</h4>
-														<ul>
-															<li class="list1">image classification</li>
-															<li class="list1">financial perfomance comparison</li>
-														</ul>
-														<h4>Decision tree</h4>
-														<ul>
-															<li class="list1">predictive analytics</li>
-															<li class="list1">pricing</li>
-														</ul>
+																		model(as the definition)</p>
+																	<h4 class="algm1">EXAMPLE ALGORITHMS</h4>
+																	<h4>Linear regressions</h4>
+																	<ul>
+																		<li class="list1">sales forecasting</li>
+																		<li class="list1">risk assessment</li>
+																	</ul>
+																	<h4>Support vector machines</h4>
+																	<ul>
+																		<li class="list1">image classification</li>
+																		<li class="list1">financial perfomance
+																			comparison</li>
+																	</ul>
+																	<h4>Decision tree</h4>
+																	<ul>
+																		<li class="list1">predictive analytics</li>
+																		<li class="list1">pricing</li>
+																	</ul>
+																</div>
+															</div>
+														</label>
 													</div>
-												</div>
-												</label>
-											</div>
-											
-												<div class="col-xs-12 col-md-3">
-												<label class="form-radio-label ml-3">
-													<input class="form-radio-input" type="radio" name="optionsRadios"
-														value="">
-														<div class="big-checkbox twoclass">
-															<div class="background-color2" >
-													<span class="form-radio-sign">Unsupervised
-														Learning</span><br /><br />
-													</div>
-													<div>
 
-														<p style="word-break: break-all;
+													<div class="col-xs-12 col-md-3">
+														<label class="form-radio-label ml-3">
+															<input class="form-radio-input" type="radio"
+																name="optionsRadios" value="">
+															<div class="big-checkbox twoclass">
+																<div class="background-color2">
+																	<span class="form-radio-sign">Unsupervised
+																		Learning</span><br /><br />
+																</div>
+																<div>
+
+																	<p style="word-break: break-all;
 															white-space: normal;">Use deep learning to arrive at conclusions and patterns through unlabled training
-															data.</p>
-														<h4 class="algm2">EXAMPLE ALGORITHMS</h4>
-														<h4>Apriori</h4>
-														<ul>
-															<li class="list2">sales functions</li>
-															<li class="list2">word associations</li>
-															<li class="list2">searcher</li>
-														</ul>
-														<h4>K-means clustering</h4>
-														<ul>
-															<li class="list2">perfomance monitoring</li>
-															<li class="list2">searcher intent</li>
-														</ul>
+																		data.</p>
+																	<h4 class="algm2">EXAMPLE ALGORITHMS</h4>
+																	<h4>Apriori</h4>
+																	<ul>
+																		<li class="list2">sales functions</li>
+																		<li class="list2">word associations</li>
+																		<li class="list2">searcher</li>
+																	</ul>
+																	<h4>K-means clustering</h4>
+																	<ul>
+																		<li class="list2">perfomance monitoring</li>
+																		<li class="list2">searcher intent</li>
+																	</ul>
+																</div>
+															</div>
+														</label>
 													</div>
-												</div>
-												</label>
-											</div>
 
-											<div class="col-xs-12 col-md-3">
-												<label class="form-radio-label ml-3">
-													<input class="form-radio-input" type="radio" name="optionsRadios"
-														value="">
-														<div class="big-checkbox threeclass">
-															<div class="background-color3">
-													<span class="form-radio-sign">Semi-supervised
-														Learning</span><br /><br />
-													</div>
-													<div>
+													<div class="col-xs-12 col-md-3">
+														<label class="form-radio-label ml-3">
+															<input class="form-radio-input" type="radio"
+																name="optionsRadios" value="">
+															<div class="big-checkbox threeclass">
+																<div class="background-color3">
+																	<span class="form-radio-sign">Semi-supervised
+																		Learning</span><br /><br />
+																</div>
+																<div>
 
-														<p style="word-break: break-all;
+																	<p style="word-break: break-all;
 															white-space: normal;">Builds a model through a mix of labeled and unlabeled data, a set of
-															categories,suggestions and exampled labels.</p>
-														<h4 class="algm3">EXAMPLE ALGORITHMS</h4>
-														<h4>Generative adversarial networks</h4>
-														<ul>
-															<li class="list3">audio and video manipulation</li>
-															<li class="list3">data creation</li>
-														</ul>
-														<h4>K-means clustering</h4>
-														<ul>
-															<li class="list3">perfomance monitoring</li>
-															<li class="list3">searcher intent</li>
-														</ul>
+																		categories,suggestions and exampled labels.</p>
+																	<h4 class="algm3">EXAMPLE ALGORITHMS</h4>
+																	<h4>Generative adversarial networks</h4>
+																	<ul>
+																		<li class="list3">audio and video manipulation
+																		</li>
+																		<li class="list3">data creation</li>
+																	</ul>
+																	<h4>K-means clustering</h4>
+																	<ul>
+																		<li class="list3">perfomance monitoring</li>
+																		<li class="list3">searcher intent</li>
+																	</ul>
+																</div>
+															</div>
+														</label>
 													</div>
-												</div>
-												</label>
-											</div>
 
-											<div class="col-xs-12 col-md-3">
-												<label class="form-radio-label ml-3">
-													<input class="form-radio-input" type="radio" name="optionsRadios"
-														value="">
-														<div class="big-checkbox fourclass">
-															<div class="background-color4">
-													<span class="form-radio-sign">Reinforcement
-														Learning</span><br /><br />
-													</div>
-													<div>
+													<div class="col-xs-12 col-md-3">
+														<label class="form-radio-label ml-3">
+															<input class="form-radio-input" type="radio"
+																name="optionsRadios" value="">
+															<div class="big-checkbox fourclass">
+																<div class="background-color4">
+																	<span class="form-radio-sign">Reinforcement
+																		Learning</span><br /><br />
+																</div>
+																<div>
 
-														<p style="word-break: break-all;
+																	<p style="word-break: break-all;
 															white-space: normal;">Self interpreting but based on a system of rewards and punishments learned through
-															trial and error,seeking maximum reward.</p>
-														<h4 class="algm4">EXAMPLE ALGORITHMS</h4>
-														<h4>Q-learning</h4>
-														<ul>
-															<li class="list4">policy creation</li>
-															<li class="list4">consumption reduction</li>
-														</ul>
-														<h4>Model-based value estimation</h4>
-														<ul>
-															<li class="list4">linear tasks</li>
-															<li class="list4">estimating partners</li>
-														</ul>
+																		trial and error,seeking maximum reward.</p>
+																	<h4 class="algm4">EXAMPLE ALGORITHMS</h4>
+																	<h4>Q-learning</h4>
+																	<ul>
+																		<li class="list4">policy creation</li>
+																		<li class="list4">consumption reduction</li>
+																	</ul>
+																	<h4>Model-based value estimation</h4>
+																	<ul>
+																		<li class="list4">linear tasks</li>
+																		<li class="list4">estimating partners</li>
+																	</ul>
+																</div>
+															</div>
+														</label>
 													</div>
 												</div>
-												</label>
-											</div>
-											</div>
 											</div>
 
 										</div>
@@ -878,29 +892,29 @@
 	<script src="../static/js/core/jquery.3.2.1.min.js"></script>
 	<script src="../static/js/core/popper.min.js"></script>
 	<script src="../static/js/core/bootstrap.min.js"></script>
-  
+
 	<!-- jQuery UI -->
 	<script src="../static/js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 	<script src="../static/js/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-  
+
 	<!-- jQuery Scrollbar -->
 	<script src="../static/js/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-  
+
 	<!-- jQuery Sparkline -->
 	<script src="../static/js/jquery.sparkline/jquery.sparkline.min.js"></script>
-  
+
 	<!-- Datatables -->
 	<script src="../static/js/datatables/datatables.min.js"></script>
-  
+
 	<!-- Bootstrap Notify -->
 	<script src="../static/js/bootstrap-notify/bootstrap-notify.min.js"></script>
-  
+
 	<!-- Sweet Alert -->
 	<script src="../static/js/sweetalert/sweetalert.min.js"></script>
-  
+
 	<!-- Atlantis JS -->
 	<script src="../static/js/atlantis.min.js"></script>
-  
+
 	<script src="../static/js/setting-demo.js"></script>
 </body>
 

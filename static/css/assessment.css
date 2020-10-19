@@ -30,7 +30,9 @@ button:focus,
 
 
 
-
+    .wizard-inner{
+        display: none;
+    }
     .wizard .nav-tabs {
         position: relative;
         margin-bottom: 0;

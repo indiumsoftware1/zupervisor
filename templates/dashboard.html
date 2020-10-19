@@ -1,42 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" class="wf-lato-n3-active wf-lato-n4-active wf-lato-n7-active wf-lato-n9-active wf-flaticon-n4-inactive wf-fontawesome5solid-n4-active wf-fontawesome5regular-n4-active wf-fontawesome5brands-n4-active wf-simplelineicons-n4-active wf-active">
+<html lang="en"
+	class="wf-lato-n3-active wf-lato-n4-active wf-lato-n7-active wf-lato-n9-active wf-flaticon-n4-inactive wf-fontawesome5solid-n4-active wf-fontawesome5regular-n4-active wf-fontawesome5brands-n4-active wf-simplelineicons-n4-active wf-active">
+
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>Zupervise Admin Dashboard</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" src="../static/img/icon.ico" type="image/x-icon"/>
+	<link rel="icon" src="../static/img/icon.ico" type="image/x-icon" />
 
 	<!-- Fonts and icons -->
-    <script src="../static/js/webfont/webfont.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" media="all"><link rel="stylesheet" href="../static/css/fonts.min.css" media="all">
-    
+	<script src="../static/js/webfont/webfont.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" media="all">
+	<link rel="stylesheet" href="../static/css/fonts.min.css" media="all">
+
 	<script>
-		// WebFont.load({
-		// 	google: {"families":["Lato:300,400,700,900"]},
-		// 	custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../']},
-		// 	active: function() {
-		// 		sessionStorage.fonts = true;
-		// 	}
-        // });
+		$(document).ready(function () {
+			var firstName = $('#firstName').text();
+			var intials = $('#firstName').text().charAt(0);
+			var profileImage = $('#profileImage').text(intials);
+			var profileImage = $('#profileImage1').text(intials);
+		});
+
 	</script>
 
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../static/css/atlantis.min.css">
-
+	<link rel="stylesheet" href="../static/css/atlantis.min.css">
+	<link rel="stylesheet" href="../static/css/custom.css">
 	<!-- CSS Just for demo purpose, don't include it in your project -->
-    <link rel="stylesheet" href="../static/css/demo.css">
+	<link rel="stylesheet" href="../static/css/demo.css">
 </head>
+
 <body>
 	<div class="wrapper">
 		<div class="main-header">
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
-				
+
 				<a href="index.html" class="logo">
 					<img src="../static/img/3.png" style="width:108px;" alt="navbar brand" class="navbar-brand">
 				</a>
-				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
+					data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
 						<i class="icon-menu"></i>
 					</span>
@@ -52,7 +58,7 @@
 
 			<!-- Navbar Header -->
 			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
-				
+
 				<div class="container-fluid">
 					<div class="collapse" id="search-nav">
 						<form class="navbar-left navbar-form nav-search mr-md-3">
@@ -68,18 +74,21 @@
 					</div>
 					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
 						<li class="nav-item toggle-nav-search hidden-caret">
-							<a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
+							<a class="nav-link" data-toggle="collapse" href="#search-nav" role="button"
+								aria-expanded="false" aria-controls="search-nav">
 								<i class="fa fa-search"></i>
 							</a>
 						</li>
 						<li class="nav-item dropdown hidden-caret">
-							<a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<i class="fa fa-envelope"></i>
 							</a>
-							<ul class="dropdown-menu messages-notif-box animated fadeIn" aria-labelledby="messageDropdown">
+							<ul class="dropdown-menu messages-notif-box animated fadeIn"
+								aria-labelledby="messageDropdown">
 								<li>
 									<div class="dropdown-title d-flex justify-content-between align-items-center">
-										Messages 									
+										Messages
 										<a href="#" class="small">Mark all as read</a>
 									</div>
 								</li>
@@ -87,7 +96,7 @@
 									<div class="message-notif-scroll scrollbar-outer">
 										<div class="notif-center">
 											<a href="#">
-												<div class="notif-img"> 
+												<div class="notif-img">
 													<img src="../static/img/jm_denis.jpg" alt="Img Profile">
 												</div>
 												<div class="notif-content">
@@ -95,11 +104,11 @@
 													<span class="block">
 														How are you ?
 													</span>
-													<span class="time">5 minutes ago</span> 
+													<span class="time">5 minutes ago</span>
 												</div>
 											</a>
 											<a href="#">
-												<div class="notif-img"> 
+												<div class="notif-img">
 													<img src="../static/img/chadengle.jpg" alt="Img Profile">
 												</div>
 												<div class="notif-content">
@@ -107,23 +116,23 @@
 													<span class="block">
 														Ok, Thanks !
 													</span>
-													<span class="time">12 minutes ago</span> 
+													<span class="time">12 minutes ago</span>
 												</div>
 											</a>
 											<a href="#">
-												<div class="notif-img"> 
-													<img src="../static/img/mlane.jpg"  alt="Img Profile">
+												<div class="notif-img">
+													<img src="../static/img/mlane.jpg" alt="Img Profile">
 												</div>
 												<div class="notif-content">
 													<span class="subject">Jhon Doe</span>
 													<span class="block">
 														Ready for the meeting today...
 													</span>
-													<span class="time">12 minutes ago</span> 
+													<span class="time">12 minutes ago</span>
 												</div>
 											</a>
 											<a href="#">
-												<div class="notif-img"> 
+												<div class="notif-img">
 													<img src="../static/img/talha.jpg" alt="Img Profile">
 												</div>
 												<div class="notif-content">
@@ -131,19 +140,21 @@
 													<span class="block">
 														Hi, Apa Kabar ?
 													</span>
-													<span class="time">17 minutes ago</span> 
+													<span class="time">17 minutes ago</span>
 												</div>
 											</a>
 										</div>
 									</div>
 								</li>
 								<li>
-									<a class="see-all" href="javascript:void(0);">See all messages<i class="fa fa-angle-right"></i> </a>
+									<a class="see-all" href="javascript:void(0);">See all messages<i
+											class="fa fa-angle-right"></i> </a>
 								</li>
 							</ul>
 						</li>
 						<li class="nav-item dropdown hidden-caret">
-							<a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<i class="fa fa-bell"></i>
 								<span class="notification">4</span>
 							</a>
@@ -155,32 +166,34 @@
 									<div class="notif-scroll scrollbar-outer">
 										<div class="notif-center">
 											<a href="#">
-												<div class="notif-icon notif-primary"> <i class="fa fa-user-plus"></i> </div>
+												<div class="notif-icon notif-primary"> <i class="fa fa-user-plus"></i>
+												</div>
 												<div class="notif-content">
 													<span class="block">
 														New user registered
 													</span>
-													<span class="time">5 minutes ago</span> 
+													<span class="time">5 minutes ago</span>
 												</div>
 											</a>
 											<a href="#">
-												<div class="notif-icon notif-success"> <i class="fa fa-comment"></i> </div>
+												<div class="notif-icon notif-success"> <i class="fa fa-comment"></i>
+												</div>
 												<div class="notif-content">
 													<span class="block">
 														Rahmad commented on Admin
 													</span>
-													<span class="time">12 minutes ago</span> 
+													<span class="time">12 minutes ago</span>
 												</div>
 											</a>
 											<a href="#">
-												<div class="notif-img"> 
-													<img src="../static/img/profile2.jpg"  alt="Img Profile">
+												<div class="notif-img">
+													<img src="../static/img/profile2.jpg" alt="Img Profile">
 												</div>
 												<div class="notif-content">
 													<span class="block">
 														Reza send messages to you
 													</span>
-													<span class="time">12 minutes ago</span> 
+													<span class="time">12 minutes ago</span>
 												</div>
 											</a>
 											<a href="#">
@@ -189,14 +202,15 @@
 													<span class="block">
 														Farrah liked Admin
 													</span>
-													<span class="time">17 minutes ago</span> 
+													<span class="time">17 minutes ago</span>
 												</div>
 											</a>
 										</div>
 									</div>
 								</li>
 								<li>
-									<a class="see-all" href="javascript:void(0);">See all notifications<i class="fa fa-angle-right"></i> </a>
+									<a class="see-all" href="javascript:void(0);">See all notifications<i
+											class="fa fa-angle-right"></i> </a>
 								</li>
 							</ul>
 						</li>
@@ -254,20 +268,25 @@
 							</div>
 						</li>
 						<li class="nav-item dropdown hidden-caret">
-							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"
+								aria-expanded="false">
 								<div class="avatar-sm">
-                                    <img src="../static/img/profile.png" style="width:40px;"
-                                    alt="..." class="avatar-img rounded-circle">
+									<span id="firstName">Zupervise</span>
+									<div id="profileImage"></div>
+									<!-- <img src="../static/img/profile.png" style="width:40px;"
+                                    alt="..." class="avatar-img rounded-circle"> -->
 								</div>
 							</a>
 							<ul class="dropdown-menu dropdown-user animated fadeIn">
 								<div class="dropdown-user-scroll scrollbar-outer">
 									<li>
 										<div class="user-box">
-											<div class="avatar-lg"><img src="../static/img/profile.png" style="width:66px;"alt="image profile" class="avatar-img rounded"></div>
+											<div class="avatar-lg"> <span id="firstName">Zupervise</span>
+												<div id="profileImage1"></div>
+											</div>
 											<div class="u-text">
-												<h4>Zupervise</h4>
-												<p class="text-muted">hello@example.com</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+												<p class="text-muted">hello@example.com</p><a href="profile.html"
+													class="btn btn-xs btn-secondary btn-sm">View Profile</a>
 											</div>
 										</div>
 									</li>
@@ -291,7 +310,7 @@
 		</div>
 
 		<!-- Sidebar -->
-		<div class="sidebar sidebar-style-2">			
+		<div class="sidebar sidebar-style-2">
 			<div class="sidebar-wrapper scrollbar scrollbar-inner">
 				<div class="sidebar-content">
 					<div class="user">
@@ -331,7 +350,7 @@
 					</div>
 					<ul class="nav nav-primary">
 						<li class="nav-item active">
-							<a href="../templates/dashboard.html" class="collapsed" >
+							<a href="../templates/dashboard.html" class="collapsed">
 								<i class="fas fa-home"></i>
 								<p>Dashboard</p>
 							</a>
@@ -347,8 +366,8 @@
 								<i class="fas fa-layer-group"></i>
 								<p>Risks</p>
 								<span class="caret"></span>
-                            </a>
-                            <div class="collapse" id="risks">
+							</a>
+							<div class="collapse" id="risks">
 								<ul class="nav nav-collapse">
 									<li>
 										<a href="../templates/new-risk.html">
@@ -365,7 +384,7 @@
 						</li>
 
 						<!-- {% url 'formscontrolurl' %} -->
-						
+
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#controls">
 								<i class="fas fa-pen-square"></i>
@@ -408,7 +427,7 @@
 								</ul>
 							</div>
 						</li>
-						
+
 						<!-- <li class="nav-item">
 							<a href="widgets.html">
 								<i class="fas fa-desktop"></i>
@@ -416,7 +435,7 @@
 								<span class="badge badge-success">4</span>
 							</a>
 						</li> -->
-						
+
 						<!-- <li class="mx-4 mt-2">
 							<a href="http://themekita.com/atlantis-bootstrap-dashboard.html" class="btn btn-primary btn-block"><span class="btn-label mr-2"> <i class="fa fa-heart"></i> </span>Buy Pro</a> 
 						</li> -->
@@ -433,7 +452,7 @@
 						<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 							<div>
 								<h2 class="text-white pb-2 fw-bold">Dashboard</h2>
-								<h5 class="text-white op-7 mb-2">Zupervise  Admin Dashboard</h5>
+								<h5 class="text-white op-7 mb-2">Zupervise Admin Dashboard</h5>
 							</div>
 							<div class="ml-md-auto py-2 py-md-0">
 								<a href="#" class="btn btn-white btn-border btn-round mr-2">Manage</a>
@@ -555,13 +574,17 @@
 									<div class="card-head-row card-tools-still-right">
 										<h4 class="card-title">Users Geolocation</h4>
 										<div class="card-tools">
-											<button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-angle-down"></span></button>
-											<button class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"><span class="fa fa-sync-alt"></span></button>
-											<button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-times"></span></button>
+											<button class="btn btn-icon btn-link btn-primary btn-xs"><span
+													class="fa fa-angle-down"></span></button>
+											<button
+												class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"><span
+													class="fa fa-sync-alt"></span></button>
+											<button class="btn btn-icon btn-link btn-primary btn-xs"><span
+													class="fa fa-times"></span></button>
 										</div>
 									</div>
 									<p class="card-category">
-									Map of the distribution of users around the world</p>
+										Map of the distribution of users around the world</p>
 								</div>
 								<div class="card-body">
 									<div class="row">
@@ -572,7 +595,8 @@
 														<tr>
 															<td>
 																<div class="flag">
-																	<img src="../static/img/flags/id.png" alt="indonesia">
+																	<img src="../static/img/flags/id.png"
+																		alt="indonesia">
 																</div>
 															</td>
 															<td>Indonesia</td>
@@ -586,8 +610,8 @@
 														<tr>
 															<td>
 																<div class="flag">
-                                                                    <img src="../static/img/flags/us.png"
-                                                                    alt="united states">
+																	<img src="../static/img/flags/us.png"
+																		alt="united states">
 																</div>
 															</td>
 															<td>USA</td>
@@ -601,7 +625,8 @@
 														<tr>
 															<td>
 																<div class="flag">
-																	<img src="../static/img/flags/au.png" alt="australia">
+																	<img src="../static/img/flags/au.png"
+																		alt="australia">
 																</div>
 															</td>
 															<td>Australia</td>
@@ -643,8 +668,7 @@
 														<tr>
 															<td>
 																<div class="flag">
-                                                                    <img src="../static/img/flags/br.png"
-                                                                    alt="brazil">
+																	<img src="../static/img/flags/br.png" alt="brazil">
 																</div>
 															</td>
 															<td>Brasil</td>
@@ -678,7 +702,8 @@
 								<div class="card-body pb-0">
 									<div class="d-flex">
 										<div class="avatar">
-											<img src="{% static 'img/logoproduct.svg' %}" alt="..." class="avatar-img rounded-circle">
+											<img src="{% static 'img/logoproduct.svg' %}" alt="..."
+												class="avatar-img rounded-circle">
 										</div>
 										<div class="flex-1 pt-1 ml-2">
 											<h6 class="fw-bold mb-1">CSS</h6>
@@ -691,7 +716,8 @@
 									<div class="separator-dashed"></div>
 									<div class="d-flex">
 										<div class="avatar">
-											<img src="{% static 'img/logoproduct.svg' %}" alt="..." class="avatar-img rounded-circle">
+											<img src="{% static 'img/logoproduct.svg' %}" alt="..."
+												class="avatar-img rounded-circle">
 										</div>
 										<div class="flex-1 pt-1 ml-2">
 											<h6 class="fw-bold mb-1">J.CO Donuts</h6>
@@ -704,7 +730,8 @@
 									<div class="separator-dashed"></div>
 									<div class="d-flex">
 										<div class="avatar">
-											<img src="{% static 'img/logoproduct3.svg' %}" alt="..." class="avatar-img rounded-circle">
+											<img src="{% static 'img/logoproduct3.svg' %}" alt="..."
+												class="avatar-img rounded-circle">
 										</div>
 										<div class="flex-1 pt-1 ml-2">
 											<h6 class="fw-bold mb-1">Ready Pro</h6>
@@ -728,7 +755,8 @@
 									<div class="card-list">
 										<div class="item-list">
 											<div class="avatar">
-												<img src="../static/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src="../static/img/jm_denis.jpg" alt="..."
+													class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
 												<div class="username">Jimmy Denis</div>
@@ -740,7 +768,8 @@
 										</div>
 										<div class="item-list">
 											<div class="avatar">
-												<img src="../static/img/chadengle.jpg"alt="..." class="avatar-img rounded-circle">
+												<img src="../static/img/chadengle.jpg" alt="..."
+													class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
 												<div class="username">Chad</div>
@@ -752,7 +781,8 @@
 										</div>
 										<div class="item-list">
 											<div class="avatar">
-												<img src="../static/img/talha.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src="../static/img/talha.jpg" alt="..."
+													class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
 												<div class="username">Talha</div>
@@ -764,7 +794,8 @@
 										</div>
 										<div class="item-list">
 											<div class="avatar">
-												<img src="../static/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src="../static/img/mlane.jpg" alt="..."
+													class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
 												<div class="username">John Doe</div>
@@ -776,7 +807,8 @@
 										</div>
 										<div class="item-list">
 											<div class="avatar">
-												<img src="../static/img/talha.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src="../static/img/talha.jpg" alt="..."
+													class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
 												<div class="username">Talha</div>
@@ -788,7 +820,8 @@
 										</div>
 										<div class="item-list">
 											<div class="avatar">
-												<img src="../static/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src="../static/img/jm_denis.jpg" alt="..."
+													class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
 												<div class="username">Jimmy Denis</div>
@@ -811,8 +844,10 @@
 									<div id="activeUsersChart"></div>
 									<h4 class="mt-5 pb-3 mb-0 fw-bold">Top active pages</h4>
 									<ul class="list-unstyled">
-										<li class="d-flex justify-content-between pb-1 pt-1"><small>/product/readypro/index.html</small> <span>7</span></li>
-										<li class="d-flex justify-content-between pb-1 pt-1"><small>/product/atlantis/demo.html</small> <span>10</span></li>
+										<li class="d-flex justify-content-between pb-1 pt-1">
+											<small>/product/readypro/index.html</small> <span>7</span></li>
+										<li class="d-flex justify-content-between pb-1 pt-1">
+											<small>/product/atlantis/demo.html</small> <span>10</span></li>
 									</ul>
 								</div>
 							</div>
@@ -828,27 +863,33 @@
 									<ol class="activity-feed">
 										<li class="feed-item feed-item-secondary">
 											<time class="date" datetime="9-25">Sep 25</time>
-											<span class="text">Responded to need <a href="#">"Volunteer opportunity"</a></span>
+											<span class="text">Responded to need <a href="#">"Volunteer
+													opportunity"</a></span>
 										</li>
 										<li class="feed-item feed-item-success">
 											<time class="date" datetime="9-24">Sep 24</time>
-											<span class="text">Added an interest <a href="#">"Volunteer Activities"</a></span>
+											<span class="text">Added an interest <a href="#">"Volunteer
+													Activities"</a></span>
 										</li>
 										<li class="feed-item feed-item-info">
 											<time class="date" datetime="9-23">Sep 23</time>
-											<span class="text">Joined the group <a href="single-group.php">"Boardsmanship Forum"</a></span>
+											<span class="text">Joined the group <a
+													href="single-group.php">"Boardsmanship Forum"</a></span>
 										</li>
 										<li class="feed-item feed-item-warning">
 											<time class="date" datetime="9-21">Sep 21</time>
-											<span class="text">Responded to need <a href="#">"In-Kind Opportunity"</a></span>
+											<span class="text">Responded to need <a href="#">"In-Kind
+													Opportunity"</a></span>
 										</li>
 										<li class="feed-item feed-item-danger">
 											<time class="date" datetime="9-18">Sep 18</time>
-											<span class="text">Created need <a href="#">"Volunteer Opportunity"</a></span>
+											<span class="text">Created need <a href="#">"Volunteer
+													Opportunity"</a></span>
 										</li>
 										<li class="feed-item">
 											<time class="date" datetime="9-17">Sep 17</time>
-											<span class="text">Attending the event <a href="single-event.php">"Some New Event"</a></span>
+											<span class="text">Attending the event <a href="single-event.php">"Some New
+													Event"</a></span>
 										</li>
 									</ol>
 								</div>
@@ -860,15 +901,19 @@
 									<div class="card-head-row">
 										<div class="card-title">Support Tickets</div>
 										<div class="card-tools">
-											<ul class="nav nav-pills nav-secondary nav-pills-no-bd nav-sm" id="pills-tab" role="tablist">
+											<ul class="nav nav-pills nav-secondary nav-pills-no-bd nav-sm"
+												id="pills-tab" role="tablist">
 												<li class="nav-item">
-													<a class="nav-link" id="pills-today" data-toggle="pill" href="#pills-today" role="tab" aria-selected="true">Today</a>
+													<a class="nav-link" id="pills-today" data-toggle="pill"
+														href="#pills-today" role="tab" aria-selected="true">Today</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link active" id="pills-week" data-toggle="pill" href="#pills-week" role="tab" aria-selected="false">Week</a>
+													<a class="nav-link active" id="pills-week" data-toggle="pill"
+														href="#pills-week" role="tab" aria-selected="false">Week</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link" id="pills-month" data-toggle="pill" href="#pills-month" role="tab" aria-selected="false">Month</a>
+													<a class="nav-link" id="pills-month" data-toggle="pill"
+														href="#pills-month" role="tab" aria-selected="false">Month</a>
 												</li>
 											</ul>
 										</div>
@@ -877,11 +922,14 @@
 								<div class="card-body">
 									<div class="d-flex">
 										<div class="avatar avatar-online">
-											<span class="avatar-title rounded-circle border border-white bg-info">J</span>
+											<span
+												class="avatar-title rounded-circle border border-white bg-info">J</span>
 										</div>
 										<div class="flex-1 ml-3 pt-1">
-											<h6 class="text-uppercase fw-bold mb-1">Joko Subianto <span class="text-warning pl-3">pending</span></h6>
-											<span class="text-muted">I am facing some trouble with my viewport. When i start my</span>
+											<h6 class="text-uppercase fw-bold mb-1">Joko Subianto <span
+													class="text-warning pl-3">pending</span></h6>
+											<span class="text-muted">I am facing some trouble with my viewport. When i
+												start my</span>
 										</div>
 										<div class="float-right pt-1">
 											<small class="text-muted">8:40 PM</small>
@@ -890,11 +938,14 @@
 									<div class="separator-dashed"></div>
 									<div class="d-flex">
 										<div class="avatar avatar-offline">
-											<span class="avatar-title rounded-circle border border-white bg-secondary">P</span>
+											<span
+												class="avatar-title rounded-circle border border-white bg-secondary">P</span>
 										</div>
 										<div class="flex-1 ml-3 pt-1">
-											<h6 class="text-uppercase fw-bold mb-1">Prabowo Widodo <span class="text-success pl-3">open</span></h6>
-											<span class="text-muted">I have some query regarding the license issue.</span>
+											<h6 class="text-uppercase fw-bold mb-1">Prabowo Widodo <span
+													class="text-success pl-3">open</span></h6>
+											<span class="text-muted">I have some query regarding the license
+												issue.</span>
 										</div>
 										<div class="float-right pt-1">
 											<small class="text-muted">1 Day Ago</small>
@@ -903,11 +954,14 @@
 									<div class="separator-dashed"></div>
 									<div class="d-flex">
 										<div class="avatar avatar-away">
-											<span class="avatar-title rounded-circle border border-white bg-danger">L</span>
+											<span
+												class="avatar-title rounded-circle border border-white bg-danger">L</span>
 										</div>
 										<div class="flex-1 ml-3 pt-1">
-											<h6 class="text-uppercase fw-bold mb-1">Lee Chong Wei <span class="text-muted pl-3">closed</span></h6>
-											<span class="text-muted">Is there any update plan for RTL version near future?</span>
+											<h6 class="text-uppercase fw-bold mb-1">Lee Chong Wei <span
+													class="text-muted pl-3">closed</span></h6>
+											<span class="text-muted">Is there any update plan for RTL version near
+												future?</span>
 										</div>
 										<div class="float-right pt-1">
 											<small class="text-muted">2 Days Ago</small>
@@ -916,11 +970,14 @@
 									<div class="separator-dashed"></div>
 									<div class="d-flex">
 										<div class="avatar avatar-offline">
-											<span class="avatar-title rounded-circle border border-white bg-secondary">P</span>
+											<span
+												class="avatar-title rounded-circle border border-white bg-secondary">P</span>
 										</div>
 										<div class="flex-1 ml-3 pt-1">
-											<h6 class="text-uppercase fw-bold mb-1">Peter Parker <span class="text-success pl-3">open</span></h6>
-											<span class="text-muted">I have some query regarding the license issue.</span>
+											<h6 class="text-uppercase fw-bold mb-1">Peter Parker <span
+													class="text-success pl-3">open</span></h6>
+											<span class="text-muted">I have some query regarding the license
+												issue.</span>
 										</div>
 										<div class="float-right pt-1">
 											<small class="text-muted">2 Day Ago</small>
@@ -929,11 +986,14 @@
 									<div class="separator-dashed"></div>
 									<div class="d-flex">
 										<div class="avatar avatar-away">
-											<span class="avatar-title rounded-circle border border-white bg-danger">L</span>
+											<span
+												class="avatar-title rounded-circle border border-white bg-danger">L</span>
 										</div>
 										<div class="flex-1 ml-3 pt-1">
-											<h6 class="text-uppercase fw-bold mb-1">Logan Paul <span class="text-muted pl-3">closed</span></h6>
-											<span class="text-muted">Is there any update plan for RTL version near future?</span>
+											<h6 class="text-uppercase fw-bold mb-1">Logan Paul <span
+													class="text-muted pl-3">closed</span></h6>
+											<span class="text-muted">Is there any update plan for RTL version near
+												future?</span>
 										</div>
 										<div class="float-right pt-1">
 											<small class="text-muted">2 Days Ago</small>
@@ -967,12 +1027,13 @@
 						</ul>
 					</nav>
 					<div class="copyright ml-auto">
-						2018, made with <i class="fa fa-heart heart text-danger"></i> by <a href="https://www.themekita.com">ThemeKita</a>
-					</div>				
+						2018, made with <i class="fa fa-heart heart text-danger"></i> by <a
+							href="https://www.themekita.com">ThemeKita</a>
+					</div>
 				</div>
 			</footer>
 		</div>
-		
+
 		<!-- Custom template | don't include it in your project! -->
 		<div class="custom-template">
 			<div class="title">Settings</div>
@@ -989,7 +1050,7 @@
 							<button type="button" class="changeLogoHeaderColor" data-color="orange"></button>
 							<button type="button" class="changeLogoHeaderColor" data-color="red"></button>
 							<button type="button" class="changeLogoHeaderColor" data-color="white"></button>
-							<br/>
+							<br />
 							<button type="button" class="changeLogoHeaderColor" data-color="dark2"></button>
 							<button type="button" class="changeLogoHeaderColor" data-color="blue2"></button>
 							<button type="button" class="changeLogoHeaderColor" data-color="purple2"></button>
@@ -1010,7 +1071,7 @@
 							<button type="button" class="changeTopBarColor" data-color="orange"></button>
 							<button type="button" class="changeTopBarColor" data-color="red"></button>
 							<button type="button" class="changeTopBarColor" data-color="white"></button>
-							<br/>
+							<br />
 							<button type="button" class="changeTopBarColor" data-color="dark2"></button>
 							<button type="button" class="selected changeTopBarColor" data-color="blue2"></button>
 							<button type="button" class="changeTopBarColor" data-color="purple2"></button>
@@ -1045,90 +1106,90 @@
 		</div>
 		<!-- End Custom template -->
 	</div>
-	 <!--   Core JS Files   -->
-     <script src="../static/js/core/jquery.3.2.1.min.js"></script>
-     <script src="../static/js/core/popper.min.js"></script>
-     <script src="../static/js/core/bootstrap.min.js"></script>
-   
-     <!-- jQuery UI -->
-     <script src="../static/js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-     <script src="../static/js/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-   
-     <!-- jQuery Scrollbar -->
-     <script src="../static/js/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-   
-     <!-- Chart JS -->
-     <script src="../static/js/chart.js/chart.min.js"></script>
-   
-     <!-- jQuery Sparkline -->
-     <script src="../static/js/jquery.sparkline/jquery.sparkline.min.js"></script>
-   
-     <!-- Chart Circle -->
-     <script src="../static/js/chart-circle/circles.min.js"></script>
-   
-     <!-- Datatables -->
-     <script src="../static/js/datatables/datatables.min.js"></script>
-   
-     <!-- Bootstrap Notify -->
-     <script src="../static/js/bootstrap-notify/bootstrap-notify.min.js"></script>
-   
-     <!-- jQuery Vector Maps -->
-     <script src="../static/js/jqvmap/jquery.vmap.min.js"></script>
-     <script src="../static/js/jqvmap/maps/jquery.vmap.world.js"></script>
-   
-     <!-- Sweet Alert -->
-     <script src="../static/js/sweetalert/sweetalert.min.js"></script>
-   
-     <!-- Atlantis JS -->
-     <script src="../static/js/atlantis.min.js"></script>
-   
-     <!-- Atlantis DEMO methods, don't include it in your project! -->
-     <script src="../static/js/setting-demo.js"></script>
-     <script src="../static/js/demo.js"></script>
+	<!--   Core JS Files   -->
+	<script src="../static/js/core/jquery.3.2.1.min.js"></script>
+	<script src="../static/js/core/popper.min.js"></script>
+	<script src="../static/js/core/bootstrap.min.js"></script>
+
+	<!-- jQuery UI -->
+	<script src="../static/js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="../static/js/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+	<!-- jQuery Scrollbar -->
+	<script src="../static/js/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+	<!-- Chart JS -->
+	<script src="../static/js/chart.js/chart.min.js"></script>
+
+	<!-- jQuery Sparkline -->
+	<script src="../static/js/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- Chart Circle -->
+	<script src="../static/js/chart-circle/circles.min.js"></script>
+
+	<!-- Datatables -->
+	<script src="../static/js/datatables/datatables.min.js"></script>
+
+	<!-- Bootstrap Notify -->
+	<script src="../static/js/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+	<!-- jQuery Vector Maps -->
+	<script src="../static/js/jqvmap/jquery.vmap.min.js"></script>
+	<script src="../static/js/jqvmap/maps/jquery.vmap.world.js"></script>
+
+	<!-- Sweet Alert -->
+	<script src="../static/js/sweetalert/sweetalert.min.js"></script>
+
+	<!-- Atlantis JS -->
+	<script src="../static/js/atlantis.min.js"></script>
+
+	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	<script src="../static/js/setting-demo.js"></script>
+	<script src="../static/js/demo.js"></script>
 	<script>
 		Circles.create({
-			id:'circles-1',
-			radius:45,
-			value:60,
-			maxValue:100,
-			width:7,
+			id: 'circles-1',
+			radius: 45,
+			value: 60,
+			maxValue: 100,
+			width: 7,
 			text: 5,
-			colors:['#f1f1f1', '#FF9E27'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
+			colors: ['#f1f1f1', '#FF9E27'],
+			duration: 400,
+			wrpClass: 'circles-wrp',
+			textClass: 'circles-text',
+			styleWrapper: true,
+			styleText: true
 		})
 
 		Circles.create({
-			id:'circles-2',
-			radius:45,
-			value:70,
-			maxValue:100,
-			width:7,
+			id: 'circles-2',
+			radius: 45,
+			value: 70,
+			maxValue: 100,
+			width: 7,
 			text: 36,
-			colors:['#f1f1f1', '#2BB930'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
+			colors: ['#f1f1f1', '#2BB930'],
+			duration: 400,
+			wrpClass: 'circles-wrp',
+			textClass: 'circles-text',
+			styleWrapper: true,
+			styleText: true
 		})
 
 		Circles.create({
-			id:'circles-3',
-			radius:45,
-			value:40,
-			maxValue:100,
-			width:7,
+			id: 'circles-3',
+			radius: 45,
+			value: 40,
+			maxValue: 100,
+			width: 7,
 			text: 12,
-			colors:['#f1f1f1', '#F25961'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
+			colors: ['#f1f1f1', '#F25961'],
+			duration: 400,
+			wrpClass: 'circles-wrp',
+			textClass: 'circles-text',
+			styleWrapper: true,
+			styleText: true
 		})
 
 		var totalIncomeChart = document.getElementById('totalIncomeChart').getContext('2d');
@@ -1137,7 +1198,7 @@
 			type: 'bar',
 			data: {
 				labels: ["S", "M", "T", "W", "T", "F", "S", "S", "M", "T"],
-				datasets : [{
+				datasets: [{
 					label: "Total Income",
 					backgroundColor: '#ff9e27',
 					borderColor: 'rgb(23, 125, 255)',
@@ -1155,22 +1216,22 @@
 						ticks: {
 							display: false //this will remove only the label
 						},
-						gridLines : {
+						gridLines: {
 							drawBorder: false,
-							display : false
+							display: false
 						}
 					}],
-					xAxes : [ {
-						gridLines : {
+					xAxes: [{
+						gridLines: {
 							drawBorder: false,
-							display : false
+							display: false
 						}
 					}]
 				},
 			}
 		});
 
-		$('#lineChart').sparkline([105,103,123,100,95,105,115], {
+		$('#lineChart').sparkline([105, 103, 123, 100, 95, 105, 115], {
 			type: 'line',
 			height: '70',
 			width: '100%',
@@ -1180,4 +1241,5 @@
 		});
 	</script>
 </body>
+
 </html>
