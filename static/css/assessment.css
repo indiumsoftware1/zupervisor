@@ -412,6 +412,20 @@ li.draggable-item.ui-draggable-dragging {
 /* drag and drop css */
 
 
+/* view assessment css */
+
+.riskids{
+   width:32px !important;
+}
+
+.controlids{
+    word-break: break-all;
+}
+
+/* view assessment css */
+
+
+
 
 
 

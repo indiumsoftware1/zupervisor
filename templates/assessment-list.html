@@ -4,7 +4,7 @@
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>View Control | Zupervise</title>
+    <title>View Assessment | Zupervise</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
     <link rel="icon" src="../static/img/icon.ico" type="image/x-icon" />
 
@@ -445,7 +445,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../templates/assessment-list.html">
+                                        <a href="../templates/risk-list.html">
                                             <span class="sub-item">View Assessments</span>
                                         </a>
                                     </li>
@@ -473,7 +473,7 @@
             <div class="content">
                 <div class="page-inner">
                     <div class="page-header">
-                        <h4 class="page-title">Controls</h4>
+                        <h4 class="page-title">Assessments</h4>
                         <ul class="breadcrumbs">
                         </ul>
                     </div>
@@ -482,11 +482,11 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="d-flex align-items-center">
-                                        <h4 class="card-title">Control List</h4>
+                                        <h4 class="card-title">Assessment List</h4>
                                         <a class="btn btn-primary btn-round ml-auto"
-                                            href="../templates/new-control.html">
+                                            href="../templates/new-assessment.html">
                                             <i class="fa fa-plus"></i>
-                                            Add Control
+                                            Add Assessment
                                         </a>
                                     </div>
                                 </div>
@@ -609,8 +609,9 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-sm-12">
+                                                    <div class="table-responsive">
                                                     <table id="add-row"
-                                                        class="display table table-striped table-hover dataTable"
+                                                        class="display table table-striped w-auto table-hover dataTable"
                                                         role="grid" aria-describedby="add-row_info">
                                                         <thead>
                                                             <tr role="row">
@@ -618,49 +619,31 @@
                                                                     aria-controls="add-row" rowspan="1" colspan="1"
                                                                     aria-sort="ascending"
                                                                     aria-label="Name: activate to sort column descending">
-                                                                    Control Id
+                                                                    Assessment Id
                                                                 </th>
                                                                 <th class="sorting" tabindex="0" aria-controls="add-row"
                                                                     rowspan="1" colspan="1"
                                                                     aria-label="Position: activate to sort column ascending"
                                                                     style="width: 250px;">
-                                                                    Control Title
+                                                                    Assessment Name
                                                                 </th>
                                                                 <th class="sorting" tabindex="0" aria-controls="add-row"
                                                                     rowspan="1" colspan="1"
                                                                     aria-label="Office: activate to sort column ascending"
                                                                     style="width: 450px;">
-                                                                    Control Summary
+                                                                    Risk Id
                                                                 </th>
                                                                 <th class="sorting" tabindex="0" aria-controls="add-row"
                                                                     rowspan="1" colspan="1"
                                                                     aria-label="Office: activate to sort column ascending"
                                                                     style="width: 150px;">
-                                                                    Report Type
+                                                                    Control Id
                                                                 </th>
                                                                 <th class="sorting" tabindex="0" aria-controls="add-row"
                                                                     rowspan="1" colspan="1"
                                                                     aria-label="Office: activate to sort column ascending"
                                                                     style="width: 150px;">
-                                                                    Frequency
-                                                                </th>
-                                                                <th class="sorting" tabindex="0" aria-controls="add-row"
-                                                                    rowspan="1" colspan="1"
-                                                                    aria-label="Office: activate to sort column ascending"
-                                                                    style="width: 150px;">
-                                                                    Classification
-                                                                </th>
-                                                                <th class="sorting" tabindex="0" aria-controls="add-row"
-                                                                    rowspan="1" colspan="1"
-                                                                    aria-label="Office: activate to sort column ascending"
-                                                                    style="width: 120px;">
-                                                                    Type
-                                                                </th>
-                                                                <th class="sorting" tabindex="0" aria-controls="add-row"
-                                                                    rowspan="1" colspan="1"
-                                                                    aria-label="Office: activate to sort column ascending"
-                                                                    style="width: 150px;">
-                                                                    Effectiveness
+                                                                    Risk 
                                                                 </th>
                                                                 <th style="width: 127px;" class="sorting" tabindex="0"
                                                                     aria-controls="add-row" rowspan="1" colspan="1"
@@ -679,19 +662,15 @@
                                                         <tbody>
 
                                                             <tr role="row" class="odd odd1">
-                                                                <td class="sorting_1">CTL_0000001</td>
-                                                                <td class="controltitle">Authorization</td>
-                                                                <td class="controlsummary">Approval of transactions
-                                                                    executed and access to assets and records.</td>
-                                                                <td class="reporttype">Standard Report</td>
-                                                                <td class="frequency">Annual</td>
-                                                                <td class="classification">Manual</td>
-                                                                <td class="type">Detective</td>
-                                                                <td class="effectiveness">Satisfactory</td>
+                                                                <td class="sorting_1">RSA_0000001</td>
+                                                                <td class="assessmentname">Quantitative</td>
+                                                                <td class="riskids">RSK_0000001,RSK_0000002,RSK_0000005</td>
+                                                                <td class="controlids">CTL_0000001,CTL_0000004,CTL_0000007</td>
+                                                                <td class="risktitle">Demolitions,Materials,Red Module Failure</td>
                                                                 <td>
                                                                     <div class="form-button-action">
                                                                         <a type="button" title=""
-                                                                            href="../templates/edit-control.html"
+                                                                            href="../templates/edit-assessment.html"
                                                                             class="btn btn-link btn-primary btn-lg"
                                                                             data-original-title="Edit Risk">
                                                                             <i class="fa fa-edit"></i>
@@ -706,23 +685,17 @@
                                                                 </td>
                                                             </tr>
                                                             <tr role="row" class="even odd1">
-                                                                <td class="sorting_1">CTL_0000002</td>
-                                                                <td class="controltitle">Configuration/ Account Mapping
-                                                                </td>
-                                                                <td class="controlsummart">"Switches" to secure data
-                                                                    against inappropriate processing</td>
-                                                                <td class="reporttype">Ad-hoc Query</td>
-                                                                <td class="frequency">Quartely</td>
-                                                                <td class="classification">Automated</td>
-                                                                <td class="type">Preventative</td>
-                                                                <td class="effectiveness">Not Satisfactory: Major
-                                                                    Business Issue (MBI)</td>
+                                                                <td class="sorting_1">RSA_0000002</td>
+                                                                <td class="assessmentname">Qualitative</td>
+                                                                <td class="riskids">RSK_0000001,RSK_0000002,RSK_0000005</td>
+                                                                <td class="controlids">CTL_0000001,CTL_0000004,CTL_0000007</td>
+                                                                <td class="risktitle">Demolitions,Materials,Red Module Failure</td>
                                                                 <td>
                                                                     <div class="form-button-action">
                                                                         <a type="button" title=""
-                                                                            href="../templates/edit-control.html"
+                                                                            href="../templates/edit-assessment.html"
                                                                             class="btn btn-link btn-primary btn-lg"
-                                                                            data-original-title="Edit Task">
+                                                                            data-original-title="Edit Risk">
                                                                             <i class="fa fa-edit"></i>
                                                                         </a>
                                                                         <button type="button" data-toggle="modal"
@@ -735,24 +708,17 @@
                                                                 </td>
                                                             </tr>
                                                             <tr role="row" class="odd odd1">
-                                                                <td class="sorting_1">CTL_0000003</td>
-                                                                <td class="controltitle">Exception/ Edit Reports</td>
-                                                                <td class="controlsummart">Reports are generated to
-                                                                    monitor something and exceptions are followed up to
-                                                                    resolution. </td>
-                                                                <td class="reporttype">Custom Developed Report</td>
-                                                                <td class="frequency">Weekly</td>
-                                                                <td class="classification">IT Department manual</td>
-                                                                <td class="type">Preventative</td>
-                                                                <td class="effectiveness">Not Satisfactory: Business
-                                                                    Issue (BI)</td>
+                                                                <td class="sorting_1">RSA_0000003</td>
+                                                                <td class="assessmentname">Generic</td>
+                                                                <td class="riskids">RSK_0000001,RSK_0000002,RSK_0000005</td>
+                                                                <td class="controlids">CTL_0000001,CTL_0000004,CTL_0000007</td>
+                                                                <td class="risktitle">Demolitions,Materials,Red Module Failure</td>
                                                                 <td>
                                                                     <div class="form-button-action">
-                                                                        <a type="button"
-                                                                            href="../templates/edit-control.html"
-                                                                            title=""
+                                                                        <a type="button" title=""
+                                                                            href="../templates/edit-assessment.html"
                                                                             class="btn btn-link btn-primary btn-lg"
-                                                                            data-original-title="Edit Task">
+                                                                            data-original-title="Edit Risk">
                                                                             <i class="fa fa-edit"></i>
                                                                         </a>
                                                                         <button type="button" data-toggle="modal"
@@ -765,23 +731,17 @@
                                                                 </td>
                                                             </tr>
                                                             <tr role="row" class="even odd1">
-                                                                <td class="sorting_1">CTL_0000004</td>
-                                                                <td class="controltitle">Management Review</td>
-                                                                <td class="controlsummart">A person different from the
-                                                                    preparer analyzing evidence</td>
-                                                                <td class="reporttype">Manually Developed Report</td>
-                                                                <td class="frequency">Bi-weekly</td>
-                                                                <td class="classification">Manual</td>
-                                                                <td class="type">Detective</td>
-                                                                <td class="effectiveness">Not Satisfactory: Major
-                                                                    Business Issue (MBI)</td>
+                                                                <td class="sorting_1">RSA_0000004</td>
+                                                                <td class="assessmentname">Site-Specific</td>
+                                                                <td class="riskids">RSK_0000001,RSK_0000002,RSK_0000005</td>
+                                                                <td class="controlids">CTL_0000001,CTL_0000004,CTL_0000007</td>
+                                                                <td class="risktitle">Demolitions,Materials,Red Module Failure</td>
                                                                 <td>
                                                                     <div class="form-button-action">
-                                                                        <a type="button"
-                                                                            href="../templates/edit-control.html"
-                                                                            title=""
+                                                                        <a type="button" title=""
+                                                                            href="../templates/edit-assessment.html"
                                                                             class="btn btn-link btn-primary btn-lg"
-                                                                            data-original-title="Edit Task">
+                                                                            data-original-title="Edit Risk">
                                                                             <i class="fa fa-edit"></i>
                                                                         </a>
                                                                         <button type="button" data-toggle="modal"
@@ -794,23 +754,17 @@
                                                                 </td>
                                                             </tr>
                                                             <tr role="row" class="odd odd1">
-                                                                <td class="sorting_1">CTL_0000005</td>
-                                                                <td class="controltitle">Reconciliation</td>
-                                                                <td class="controlsummart">Check whether two items
-                                                                    (account balances, computer systems) are consistent.
-                                                                </td>
-                                                                <td class="reporttype">Standard Report,</td>
-                                                                <td class="frequency">Transactional</td>
-                                                                <td class="classification">Manual</td>
-                                                                <td class="type">Detective</td>
-                                                                <td class="effectiveness">Satisfactory</td>
+                                                                <td class="sorting_1">RSA_0000005</td>
+                                                                <td class="assessmentname">Dynamic</td>
+                                                                <td class="riskids">RSK_0000001,RSK_0000002,RSK_0000005</td>
+                                                                <td class="controlids">CTL_0000001,CTL_0000004,CTL_0000007</td>
+                                                                <td class="risktitle">Demolitions,Materials,Red Module Failure</td>
                                                                 <td>
                                                                     <div class="form-button-action">
-                                                                        <a type="button"
-                                                                            href="../templates/edit-control.html"
-                                                                            title=""
+                                                                        <a type="button" title=""
+                                                                            href="../templates/edit-assessment.html"
                                                                             class="btn btn-link btn-primary btn-lg"
-                                                                            data-original-title="Edit Task">
+                                                                            data-original-title="Edit Risk">
                                                                             <i class="fa fa-edit"></i>
                                                                         </a>
                                                                         <button type="button" data-toggle="modal"
@@ -824,6 +778,7 @@
                                                             </tr>
                                                         </tbody>
                                                     </table>
+                                                </div>
                                                 </div>
                                             </div>
                                             <!-- <div class="row">
