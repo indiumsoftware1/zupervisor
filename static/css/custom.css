@@ -188,18 +188,7 @@ display: none;
   display: none;
 }
   
-.controlhead{
-  margin-left: 10px;
-  margin-top: 10px;
-  font-weight: 600;
 
-}
-
-#rccss{
-  background-color: lightblue;
-  overflow-y: scroll;
-  height: 250px;
-}
 
 #profileImage {
   width: 41px;
