@@ -10,7 +10,13 @@
 
 	<!-- Fonts and icons -->
 	<script src="../static/js/webfont/webfont.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<!-- slider jquery js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<!-- slider jquery js -->
+ 
+
+ 
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" media="all">
 	<link rel="stylesheet" href="../static/css/fonts.min.css" media="all">
 	<script>
@@ -34,6 +40,7 @@
 	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../static/css/atlantis.min.css">
 	<link rel="stylesheet" href="../static/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/slider.css">
 
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="../static/css/demo.css">
@@ -776,6 +783,64 @@
 											</div>
 
 										</div>
+										
+											<div class="col-xs-12 col-md-6">
+											<div class="form-group">
+												<label for="likelihood">Likelihood</label>
+												<div class="range2" style="background: none;">
+													<input type="range" min="1" max="5" steps="1" onchange="updateTextInput(this.value)">
+												   
+												  </div>
+												
+												  <ul class="range-labels2">
+													<li class="active selected">Rare</li>
+													<li>Unlikely</li>
+													<li>Reasonably Possible</li>
+													<li>Likely</li>
+													<li>Almost Certain</li>
+												  </ul>
+												
+												  <input type="hidden" id="likelihood" name="likelihood" value="">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<div class="oval">
+													<h6 class="inherentcss"><span>Inherent</span><span>Risk Score</span></h6>
+													<div class="inherentriskscore" name="riskscore" id="riskscore" >24</div>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="col-xs-12 col-md-6">
+											<div class="form-group">
+												<label for="likelihood">Impact</label>
+												<div class="range1" style="background: none;">
+													<input type="range" min="1" max="5" steps="1" onchange="updateTextInput1(this.value)">
+												   
+												  </div>
+												
+												  <ul class="range-labels1">
+													<li class="active selected">Low</li>
+													<li>Minor</li>
+													<li>Moderate</li>
+													<li>Major</li>
+													<li>Catastrophic</li>
+												  </ul>
+												
+												  <input type="hidden" id="impact" name="impact" value="">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<div class="oval1">
+													<h6 class="inherentcss"><span>Inherent</span><span>Risk Score</span></h6>
+													<div class="inherentriskscore" name="riskscore" id="riskscore" >24</div>
+												</div>
+											</div>
+										</div>
+									
 									</div>
 								</div>
 								<div class="card-action">
@@ -888,8 +953,11 @@
 		</div>
 		<!-- End Custom template -->
 	</div>
+	<!-- slider js -->
+	<script src="../static/js/likelihoodslider.js"></script>
+	<script src="../static/js/impactslider.js"></script>
 	<!--   Core JS Files   -->
-	<script src="../static/js/core/jquery.3.2.1.min.js"></script>
+	<!-- <script src="../static/js/core/jquery.3.2.1.min.js"></script> -->
 	<script src="../static/js/core/popper.min.js"></script>
 	<script src="../static/js/core/bootstrap.min.js"></script>
 
