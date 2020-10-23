@@ -7,9 +7,11 @@ var sheet = document.createElement('style'),
   prefs = ['webkit-slider-runnable-track', 'moz-range-track', 'ms-track'];
 
 document.body.appendChild(sheet);
+console.log(sheet)
 
 
 var getTrackStyle1 = function (el) {
+  console.log(el);
   var curVal = el.value,
     val = (curVal - 1) * 24.666666667,
     style2 = '';
@@ -17,7 +19,6 @@ var getTrackStyle1 = function (el) {
   $('.range-labels1 li').removeClass('active selected');
 
   var curLabel = $('.range-labels1').find('li:nth-child(' + curVal + ')');
-  console.log("hello",curVal);
   curLabel.addClass('active selected');
   curLabel.prevAll().addClass('selected');
 

@@ -20,6 +20,10 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<!-- html wizard js -->
 
+		<!-- slider jquery js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<!-- slider jquery js -->
+
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" media="all">
 	<link rel="stylesheet" href="../static/css/fonts.min.css" media="all">
 
@@ -86,6 +90,7 @@
 	<link rel="stylesheet" href="../static/css/atlantis.min.css">
 	<link rel="stylesheet" href="../static/css/custom.css">
 	<link rel="stylesheet" href="../static/css/assessment.css">
+	<link rel="stylesheet" href="../static/css/slider.css">
 
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="../static/css/demo.css">
@@ -426,14 +431,6 @@
 																	<div class="row">
 																		<div class="col-md-6">
 																			<div class="form-group">
-																				<label for="riskId">Risk Id</label>
-																				<input type="text" class="form-control" id="riskId" readonly
-																					placeholder="RSA_0000001">
-
-																			</div>
-																		</div>
-																		<div class="col-md-6">
-																			<div class="form-group">
 																				<label for="projectname">Assessment Project
 																					Name</label>
 																				<input type="text" class="form-control" id="projectname"
@@ -505,6 +502,13 @@
 																					<option>Transfer</option>
 																					<option>Avoid</option>
 																				</select>
+																			</div>
+																		</div>
+																			<div class="col-md-6">
+																			<div class="form-group">
+																				<label for="samplesize">Sample Size</label>
+																				<input type="text" class="form-control" id="samplesize"
+																					placeholder="Enter Sample Size">
 																			</div>
 																		</div>
 																	</div>
@@ -610,7 +614,7 @@
 																		</div>
 																		<div class="col-md-6">
 																			<div class="form-group">
-																				<label for="controlid">Control Id</label>
+																				<label for="controlid">Control ID</label>
 																				<input type="text" class="form-control" id="controlid" placeholder="" readonly>
 																			</div>
 																		</div>
@@ -859,11 +863,68 @@
 																		</div>
 																		<div class="col-md-12 col-lg-12">
 																			<div class="form-group">
-																				<label>File Upload</label>
+																				<label>Control Execution Report</label>
 																				<div class="custom-file">
 																					<input type="file" class="custom-file-input" id="customFile">
 																					<label class="custom-file-label" for="customFile">Select
 																						file</label>
+																				</div>
+																			</div>
+																		</div>
+
+																		<div class="col-xs-12 col-md-6">
+																			<div class="form-group">
+																				<label for="likelihood">Likelihood</label>
+																				<div class="range2" style="background: none;">
+																					<input type="range" min="1" max="5" steps="1" onchange="updateTextInput(this.value)">
+																					 
+																					</div>
+																				
+																					<ul class="range-labels2">
+																					<li class="active selected">Rare</li>
+																					<li>Unlikely</li>
+																					<li>Reasonably Possible</li>
+																					<li>Likely</li>
+																					<li>Almost Certain</li>
+																					</ul>
+																				
+																					<input type="hidden" id="likelihood" name="likelihood" value="">
+																			</div>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="form-group">
+																				<div class="ovalassessment">
+																					<h6 class="inherentcss"><span>Inherent</span><span>Risk Score</span></h6>
+																					<div class="inherentriskscore" name="riskscore" id="riskscore" >24</div>
+																				</div>
+																			</div>
+																		</div>
+								
+								
+																		<div class="col-xs-12 col-md-6">
+																			<div class="form-group">
+																				<label for="likelihood">Impact</label>
+																				<div class="range1" style="background: none;">
+																					<input type="range" min="1" max="5" steps="1" onchange="updateTextInput1(this.value)">
+																					 
+																					</div>
+																				
+																					<ul class="range-labels1">
+																					<li class="active selected">Low</li>
+																					<li>Minor</li>
+																					<li>Moderate</li>
+																					<li>Major</li>
+																					<li>Catastrophic</li>
+																					</ul>
+																				
+																					<input type="hidden" id="impact" name="impact" value="">
+																			</div>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="form-group">
+																				<div class="oval1">
+																					<h6 class="inherentcss"><span>Inherent</span><span>Risk Score</span></h6>
+																					<div class="inherentriskscore" name="riskscore" id="riskscore" >24</div>
 																				</div>
 																			</div>
 																		</div>
@@ -993,10 +1054,12 @@
 		<!-- End Custom template -->
 	</div>
 	<!--   Core JS Files   -->
+	<script src="../static/js/likelihoodslider.js"></script>
+	<script src="../static/js/impactslider.js"></script>
 	<script src="../static/js/main.js"></script>
 	<!-- <script src="../static/js/core/jquery.3.2.1.min.js"></script> -->
 	<script src="../static/js/core/popper.min.js"></script>
-	<!-- <script src="../static/js/core/bootstrap.min.js"></script> -->
+	<script src="../static/js/core/bootstrap.min.js"></script>
 
 	<!-- jQuery UI -->
 	<script src="../static/js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
