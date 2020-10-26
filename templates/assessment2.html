@@ -46,11 +46,13 @@
 				placeholder: "placeholder",
 				delay: 150,
 				receive: function( event, ui ) {
+					var arr = [];
 					$('#selectedList li').each(function(index) {
-				var selectedone = $(this).html();
-				$("#selectedrisk").text(selectedone);
-					console.log("hello",$("#selectedrisk").text());
-            });
+					var selectedone = $(this).html();
+					arr.push(selectedone);
+					$("#selectedrisk").val(arr);
+					console.log(	$("#selectedrisk").val(arr));
+          });
 				
 				}
 			})
