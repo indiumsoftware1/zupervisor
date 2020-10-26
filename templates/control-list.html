@@ -60,8 +60,6 @@
     <link rel="stylesheet" href="../static/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/css/atlantis.min.css">
     <link rel="stylesheet" href="../static/css/custom.css">
-
-    <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="../static/css/demo.css">
 </head>
 
@@ -599,13 +597,13 @@
                                                         <label>Show <select name="add-row_length" aria-controls="add-row" class="form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label>
                                                     </div> -->
                                                 <!-- </div> -->
-                                                <div class="col-lg-12 col-md-6">
+                                                <!-- <div class="col-lg-12 col-md-6">
                                                     <div id="add-row_filter" class="dataTables_filter">
                                                         <label>Search:<input type="search"
                                                                 class="form-control form-control-sm" placeholder=""
                                                                 aria-controls="add-row"></label>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="row">
                                                 <div class="col-sm-12">
@@ -622,43 +620,43 @@
                                                                 </th>
                                                                 <th class="sorting" tabindex="0" aria-controls="add-row"
                                                                     rowspan="1" colspan="1"
-                                                                    aria-label="Position: activate to sort column ascending"
+                                                                    aria-label="Control Title: activate to sort column ascending"
                                                                     style="width: 250px;">
                                                                     Control Title
                                                                 </th>
                                                                 <th class="sorting" tabindex="0" aria-controls="add-row"
                                                                     rowspan="1" colspan="1"
-                                                                    aria-label="Office: activate to sort column ascending"
+                                                                    aria-label="Control Summary: activate to sort column ascending"
                                                                     style="width: 450px;">
                                                                     Control Summary
                                                                 </th>
                                                                 <th class="sorting" tabindex="0" aria-controls="add-row"
                                                                     rowspan="1" colspan="1"
-                                                                    aria-label="Office: activate to sort column ascending"
+                                                                    aria-label="Report Type: activate to sort column ascending"
                                                                     style="width: 150px;">
                                                                     Report Type
                                                                 </th>
                                                                 <th class="sorting" tabindex="0" aria-controls="add-row"
                                                                     rowspan="1" colspan="1"
-                                                                    aria-label="Office: activate to sort column ascending"
+                                                                    aria-label="Frequency: activate to sort column ascending"
                                                                     style="width: 150px;">
                                                                     Frequency
                                                                 </th>
                                                                 <th class="sorting" tabindex="0" aria-controls="add-row"
                                                                     rowspan="1" colspan="1"
-                                                                    aria-label="Office: activate to sort column ascending"
+                                                                    aria-label="Classification: activate to sort column ascending"
                                                                     style="width: 150px;">
                                                                     Classification
                                                                 </th>
                                                                 <th class="sorting" tabindex="0" aria-controls="add-row"
                                                                     rowspan="1" colspan="1"
-                                                                    aria-label="Office: activate to sort column ascending"
+                                                                    aria-label="Type: activate to sort column ascending"
                                                                     style="width: 120px;">
                                                                     Type
                                                                 </th>
                                                                 <th class="sorting" tabindex="0" aria-controls="add-row"
                                                                     rowspan="1" colspan="1"
-                                                                    aria-label="Office: activate to sort column ascending"
+                                                                    aria-label="Effectiveness: activate to sort column ascending"
                                                                     style="width: 150px;">
                                                                     Effectiveness
                                                                 </th>
@@ -996,6 +994,18 @@
     <script src="../static/js/atlantis.min.js"></script>
 
     <script src="../static/js/setting-demo.js"></script>
+
+    <script >
+		$(document).ready(function() {
+			$('#add-row').DataTable({
+                "paging": false
+			});
+			// Add Row
+			// $('#add-row').DataTable({
+			// 	"pageLength": 5,
+			// });
+		});
+	</script>
 </body>
 
 </html>
