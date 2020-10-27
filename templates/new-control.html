@@ -31,6 +31,25 @@
 		});
 
 	</script>
+	<script>
+		$(document).ready(function () {
+			$('#customFile').on('change', function () {
+				//get the file name
+				// var fileName = $(this).val().split("\\").pop();
+				// console.log(fileName);
+				// //replace the "Choose a file" label
+				// 
+				var filenames = '';
+				for (var i = 0; i < this.files.length; i++) {
+					filenames = this.files[i].name + ', ' + filenames;
+				}
+			    $(this).next('.custom-file-label').addClass("selected").html(filenames); 
+			});
+		});
+	</script>
+	<script>
+
+	</script>
 
 	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../static/css/atlantis.min.css">
@@ -81,8 +100,8 @@
 					</div>
 					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
 						<li class="nav-item toggle-nav-search hidden-caret">
-							<a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false"
-								aria-controls="search-nav">
+							<a class="nav-link" data-toggle="collapse" href="#search-nav" role="button"
+								aria-expanded="false" aria-controls="search-nav">
 								<i class="fa fa-search"></i>
 							</a>
 						</li>
@@ -271,7 +290,8 @@
 							</div>
 						</li> -->
 						<li class="nav-item dropdown hidden-caret">
-							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"
+								aria-expanded="false">
 								<div class="avatar-sm">
 									<span id="firstName">Zupervise</span>
 									<div id="profileImage"></div>
@@ -283,7 +303,7 @@
 										<div class="user-box">
 											<div class="avatar-lg">
 												<span id="firstName">Zupervise</span>
-									<div id="profileImage1"></div>
+												<div id="profileImage1"></div>
 											</div>
 											<div class="u-text">
 												<h4>Zupervise</h4>
@@ -479,26 +499,33 @@
 										<div class="col-md-6 col-lg-6">
 											<div class="form-group">
 												<label for="control">Control</label>
-												<input type="text" class="form-control" id="control" placeholder="Enter Control Title">
+												<input type="text" class="form-control" id="control"
+													placeholder="Enter Control Title">
 
 											</div>
 											<div class="form-group">
 												<label for="process">Process</label>
-												<input type="text" class="form-control" id="process" placeholder="Enter Process">
+												<input type="text" class="form-control" id="process"
+													placeholder="Enter Process">
 											</div>
 											<div class="form-group">
 												<label for="summary">Summary</label>
-												<input type="text" class="form-control" id="summary" placeholder="Enter Control Description">
+												<input type="text" class="form-control" id="summary"
+													placeholder="Enter Control Description">
 											</div>
 											<div class="form-group">
 												<label for="guidelines">Guidelines</label>
-												<input type="text" class="form-control" id="guidlines" placeholder="Enter guidelines">
+												<input type="text" class="form-control" id="guidlines"
+													placeholder="Enter guidelines">
 											</div>
 											<div class="form-group">
 												<label>Control Execution Report</label>
 												<div class="custom-file">
-													<input type="file" class="custom-file-input" id="customFile">
-													<label class="custom-file-label" for="customFile">Select
+													<input type="file" class="custom-file-input" name="files[]"
+														id="customFile" multiple>
+													<label class="custom-file-label" for="customFile" style="  overflow: hidden;
+													text-overflow: ellipsis;
+													white-space: nowrap;">Select
 														file</label>
 												</div>
 											</div>
@@ -506,7 +533,8 @@
 											<div class="form-group">
 												<div class="form-group">
 													<label for="exampleFormControlSelect2">Type of Report</label>
-													<select multiple class="form-control" id="exampleFormControlSelect2">
+													<select multiple class="form-control"
+														id="exampleFormControlSelect2">
 														<option>Standard Report</option>
 														<option>Custom Developed Report</option>
 														<option>Ad-hoc Query</option>
@@ -515,35 +543,36 @@
 												</div>
 											</div>
 
-									</div>
-									<div class="col-md-6 col-lg-6">
-										<div class="form-group">
+										</div>
+										<div class="col-md-6 col-lg-6">
 											<div class="form-group">
-												<label for="reportdate">Effective Date of Control</label>
-												<input type="date" class="form-control" id="controldate" placeholder="">
+												<div class="form-group">
+													<label for="reportdate">Effective Date of Control</label>
+													<input type="date" class="form-control" id="controldate"
+														placeholder="">
+												</div>
 											</div>
-										</div>
-										<div class="form-group">
-											<label for="exampleFormControlSelect1">Frequency</label>
-											<select class="form-control" id="exampleFormControlSelect1">
-												<option>Annual</option>
-												<option>Semi-Annual</option>
-												<option>Quarterly</option>
-												<option>Monthly</option>
-												<option>Bi-weekly</option>
-												<option>Weekly</option>
-												<option>Transactional</option>
-												<option>Ad Hoc</option>
-											</select>
-										</div>
-										<div class="form-group">
-											<label for="exampleFormControlSelect1">Classification</label>
-											<select class="form-control" id="exampleFormControlSelect1">
-												<option>Manual</option>
-												<option>It Department</option>
-												<option>Automated</option>
-											</select>
-										</div>
+											<div class="form-group">
+												<label for="exampleFormControlSelect1">Frequency</label>
+												<select class="form-control" id="exampleFormControlSelect1">
+													<option>Annual</option>
+													<option>Semi-Annual</option>
+													<option>Quarterly</option>
+													<option>Monthly</option>
+													<option>Bi-weekly</option>
+													<option>Weekly</option>
+													<option>Transactional</option>
+													<option>Ad Hoc</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label for="exampleFormControlSelect1">Classification</label>
+												<select class="form-control" id="exampleFormControlSelect1">
+													<option>Manual</option>
+													<option>It Department</option>
+													<option>Automated</option>
+												</select>
+											</div>
 											<div class="form-group">
 												<label for="exampleFormControlSelect1">Type</label>
 												<select class="form-control" id="exampleFormControlSelect1">
@@ -551,22 +580,23 @@
 													<option>Detective</option>
 												</select>
 											</div>
-										
-										<div class="form-group">
-											<label for="exampleFormControlSelect1">Effectiveness</label>
-											<select class="form-control" id="exampleFormControlSelect1">
-												<option>Saticfactory</option>
-												<option>Not Satisfactory:Business Issue (BI)</option>
-												<option>Not Satisfactory:Major Business Issue (MBI)</option>
-											</select>
-										</div>
 
-										<div class="form-group">
-											<label for="samplesize">Sample Size</label>
-											<input type="text" class="form-control" id="samplesize" placeholder="Enter samplesize">
-										</div>
+											<div class="form-group">
+												<label for="exampleFormControlSelect1">Effectiveness</label>
+												<select class="form-control" id="exampleFormControlSelect1">
+													<option>Saticfactory</option>
+													<option>Not Satisfactory:Business Issue (BI)</option>
+													<option>Not Satisfactory:Major Business Issue (MBI)</option>
+												</select>
+											</div>
 
-									</div>
+											<div class="form-group">
+												<label for="samplesize">Sample Size</label>
+												<input type="text" class="form-control" id="samplesize"
+													placeholder="Enter samplesize">
+											</div>
+
+										</div>
 									</div>
 								</div>
 								<div class="card-action">
